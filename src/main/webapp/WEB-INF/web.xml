@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<web-app>
-  <display-name>food</display-name>
-  <!--<welcome-file-list>-->
-    <!--<welcome-file>index.html</welcome-file>-->
-    <!--<welcome-file>index.htm</welcome-file>-->
-    <!--<welcome-file>index.jsp</welcome-file>-->
-    <!--<welcome-file>default.html</welcome-file>-->
-    <!--<welcome-file>default.htm</welcome-file>-->
-    <!--<welcome-file>default.jsp</welcome-file>-->
-  <!--</welcome-file-list>-->
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>s70-ssm-1</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
 
   <!-- 监听器，tomcat一启动就启动Spring -->
   <listener>
@@ -24,8 +23,8 @@
   </context-param>
 
   <!--获取工程所在路径
-         String path = System.getProperty("ROOT");
-      -->
+     String path = System.getProperty("ROOT");
+  -->
   <context-param>
     <param-name>webAppRootKey</param-name>
     <param-value>ROOT</param-value>
@@ -34,6 +33,7 @@
   <listener>
     <listener-class>org.springframework.web.util.WebAppRootListener</listener-class>
   </listener>
+
 
   <!-- SpringMVC的对外接口，前端控制器 -->
   <servlet>
