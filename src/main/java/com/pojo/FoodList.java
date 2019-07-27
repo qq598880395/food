@@ -1,7 +1,10 @@
 package com.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 
+@TableName("food_list")
 public class FoodList implements Serializable {
     private int food_id;
     private int hotel_id;

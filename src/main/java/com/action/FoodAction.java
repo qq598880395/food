@@ -10,12 +10,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.io.File;
+
 @RequestMapping("/Foodlist")
 @Controller
 public class FoodAction {
 
     @Autowired
-    private FoodService foodService;
+   private FoodService foodService;
 
    @PostMapping("/addFoodList")
     @ResponseBody

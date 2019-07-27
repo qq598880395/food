@@ -14,6 +14,7 @@
   ">
 
     <!-- 扫描Spring的action层，是映射生效 -->
+    <mvc:annotation-driven/>
     <context:component-scan base-package="com.action"></context:component-scan>
 
     <!-- 中文处理 要在context下面 -->
