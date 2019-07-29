@@ -95,7 +95,7 @@
                     <div class="layui-upload">
                         <button type="button" class="layui-btn" id="test2">多图片上传</button>
                         　<!-- 隐藏的input,一个隐藏的input（用于保存文件url） -->
-                        　<input type="hidden" id="img_url" name="food_pic" value=""/>
+                        　<input type="hidden" id="img_url" name="image" value=""/>
                         <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
                             预览图：
                             <div class="layui-upload-list" id="demo2"></div>

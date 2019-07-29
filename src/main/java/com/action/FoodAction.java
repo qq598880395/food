@@ -11,19 +11,19 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.io.File;
 
-@RequestMapping("/Foodlist")
+@RequestMapping("/FoodList")
 @Controller
 public class FoodAction {
 
     @Autowired
    private FoodService foodService;
-
+//添加菜品
    @PostMapping("/addFoodList")
     @ResponseBody
     public String addFoodList(FoodVO vo, String image) {
        //image="/tmp/123456.jpg
         System.out.println("image:" + image);
-        String srcPath = System.getProperty("ROOT") + image;//从哪里复制
+        String srcPath =  image;//从哪里复制
         String desPath = System.getProperty("ROOT") + "/images";// 制到哪里
         System.out.println("src:" + srcPath);
         System.out.println("des:" + desPath);
@@ -37,7 +37,8 @@ public class FoodAction {
         FileUtil.copy(srcPath, desPath, true);
         String newPath = "/images" + image.substring(4);
         vo.setFood_pic(newPath);
-
+//数据库操作
+        foodService.addFoodList(vo);
         return "success";
     }
 
