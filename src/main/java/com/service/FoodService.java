@@ -18,7 +18,6 @@ public class FoodService {
 //      vo转po
         FoodList po = new FoodList();
         BeanUtils.copyProperties(vo, po);
-//        int n = foodListDao.insert(po);
         int n =foodListDao.insert(po);
         System.out.println("666");
         return n;
